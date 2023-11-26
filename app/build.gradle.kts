@@ -49,6 +49,13 @@ android {
     }
 }
 
+// Support for build.yml
+tasks.register("printVersionName") {
+    doLast {
+        println(android.defaultConfig.versionName)
+    }
+}
+
 dependencies {
     implementation(libs.core.ktx)
     implementation(libs.lifecycle.runtime.ktx)
